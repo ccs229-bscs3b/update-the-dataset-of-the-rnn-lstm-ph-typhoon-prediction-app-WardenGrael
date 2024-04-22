@@ -16,11 +16,11 @@ if "model" not in st.session_state:
 def app():
     st.subheader('RNN-LSTM Based Typhoon Prediction in the Philippines')
     
-    text = """Prof. Louie F. Cervantes, M. Eng. (Information Engineering)
-    \nCCS 229 - Intelligent Systems
-    *Department of Computer Science
-    *College of Information and Communications Technology
-    *##West Visayas State University##"""
+    text = """Kyne Gabriel A. de Leon, (BSCS 3B)
+    \n~~{CCS 229 - Intelligent Systems}~~
+    ~~{Department of Computer Science}~~
+    ~~{College of Information and Communications Technology}~~
+    ~~{West Visayas State University}~~"""
     st.text(text)
 
     text = """This Streamlit app utilizes a bi-directional Recurrent Neural Network 
@@ -28,14 +28,14 @@ def app():
     data and forecast the likelihood of typhoons affecting the Philippines in a 
     given month. Users can interact with the app to visualize past typhoon 
     patterns and receive monthly forecasts, potentially aiding in disaster 
-    preparedness efforts."""
+    preparedness efforts. This app has been updated to include data from 2000 - 01 to 2023 - 12"""
     st.write(text)
 
     text = """The data is obtained from the following site : 
     https://en.wikipedia.org/wiki/List_of_typhoons_in_the_Philippines_(2000%E2%80%93present)"""
     st.write(text)  
 
-    df = pd.read_csv('./ph-typhoons.csv', header=0)
+    df = pd.read_csv('./Philippines_Typhoons_2000_Present.csv', header=0)
 
     with st.expander('View Dataset'):
         # Load the data
